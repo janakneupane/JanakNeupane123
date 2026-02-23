@@ -53,6 +53,7 @@
   margin-left: 10px;
 }
 
+
 .skill-mf .progress {
   /* background-color: #cde1f8; */
   margin: .5rem 0 1.2rem 0;
@@ -296,6 +297,61 @@
   left: 0;
 }
 
+/* Messenger Floating Button */
+.messenger-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 100px; /* above WhatsApp button */
+  right: 25px;
+  background-color: #0084FF;
+  color: #FFF;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 28px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.messenger-float:hover {
+  transform: scale(1.1);
+  background-color: #006edc;
+}
+
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 25px;
+  right: 25px;
+  background-color: #25D366;
+  color: #FFF;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  background-color: #1ebe5d;
+}
+
+
+
 </style>
 
 
@@ -386,6 +442,8 @@ typeEffect();
 		</div>
     </section>
 
+
+
     <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
   <div class="container">
     <div class="row d-flex align-items-center">
@@ -423,6 +481,9 @@ typeEffect();
     </div>
   </div>
 </section>
+
+
+
 
 	<section class="ftco-section experience-section" id="resume-section">
   <div class="container">
@@ -637,6 +698,14 @@ Organized by Free Students Union in cooperation with society of mechanical engin
  <li>Basic and advance training on SOLIDWORKS
             Organized by Society of Mechanical Engineering Students, Purwanchal Campus, Dharan 
 </li>
+          
+
+         
+          
+          
+          
+         
+          
          
          
         </ul>
@@ -677,6 +746,9 @@ Assessed public transport vehicles using performance, safety, comfort, and capac
   </div>
 </section>
 
+
+
+	
 	
 	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
 			
@@ -700,10 +772,14 @@ Assessed public transport vehicles using performance, safety, comfort, and capac
           
 
           <span class="company">
-           1. Quantifying Energy Generation Loss: A Comparison of Conventional and Bieri Vertical Sediment Flushing Systems in Himalayan Hydropower Projects
+           1. Comparative Analysis of Bieri Vertical and Conventional Sediment Flushing in Hydropower Projects of Gandaki Basin
           </span>
 
-          <a href="https://www.ijrp.org/paper-detail/8619"
+          
+
+          
+
+          <a href="https://elibrary.tucl.edu.np/items/e3bd5677-666b-4122-8eba-b2fefda836cf"
              target="_blank"
              class="btn btn-primary mt-3">
             Read Full Paper
@@ -715,6 +791,9 @@ Assessed public transport vehicles using performance, safety, comfort, and capac
 
   </div>
 </section>
+
+
+
 
    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
       <div class="container">
@@ -770,7 +849,7 @@ Assessed public transport vehicles using performance, safety, comfort, and capac
 			<br>
 			<div class="row justify-content-center">
 				<div class="col-md-7 ftco-animate text-center">
-					<h2>Have a<span> Question?  </span> <a href="https://url-shortener.me/AB4G" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+					<h2>Have a<span> Question?  </span> <a href="https://docs.google.com/forms/d/e/1FAIpQLScONZtEuxq1Vr4Ju-vHtrlpLek7wl4KtbUmjHAQEZfUrMoSuQ/viewform?usp=dialog" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
 				</div>
 			</div>
 				<br>
@@ -786,6 +865,8 @@ Assessed public transport vehicles using performance, safety, comfort, and capac
    </div>
  </section>
 
+
+ 
 	
     <footer class="ftco-footer ftco-section">
 		<div class="container">
@@ -819,6 +900,29 @@ Assessed public transport vehicles using performance, safety, comfort, and capac
   <script src="js/scrollax.min.js"></script>
   
   <script src="js/main.js"></script>
-    
+    <script src="js/main.js"></script>
+<a href="https://m.me/jawnock"
+   class="messenger-float"
+   target="_blank"
+   title="Chat with me on Messenger">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="white" viewBox="0 0 24 24">
+  <path d="M12 2C6.48 2 2 6.02 2 10.99c0 2.84 1.45 5.36 3.71 7.02V22l3.44-1.89c.91.25 1.87.38 2.85.38 5.52 0 10-4.02 10-8.99S17.52 2 12 2zm1.2 11.83l-2.55-2.72-4.2 2.72 4.62-4.9 2.48 2.72 4.23-2.72-4.58 4.9z"/>
+</svg>
+
+</a>
+
+
+
+<a href="https://wa.me/9779851064531"
+   class="whatsapp-float"
+   target="_blank"
+   title="Chat with me on WhatsApp">
+   <i class="icon-whatsapp"></i>
+</a>
+
+</body>
+</html>
+
   </body>
 </html>
