@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Janak Neupane | Mechanical Engineer | Nepal</title>
+<meta name="description" content="Janak Neupane is a Mechanical Engineer from Nepal with experience in government service, renewable energy, vehicle inspection, and engineering education.">
+<meta name="keywords" content="Janak Neupane, Mechanical Engineer Nepal, Renewable Energy Engineer, Vehicle Inspection Nepal">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-1:#eef3f8;
+    --bg-2:#e3ecf5;
+    --navy:#0f2a47;
+    --navy-soft:#173a5e;
+    --teal:#4fb8ce;
+    --teal-dark:#3aa0b8;
+    --text-body:#4b5563;
+    --text-muted:#6b7686;
+    --card:#ffffff;
+    --border:#dfe7ee;
+    --tag-bg:#dcebf5;
+    --amber:#f0a63b;
+    --blue-dot:#3b82c4;
+    --shadow: 0 10px 30px rgba(15,42,71,0.08);
+    --radius: 14px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Lora', Georgia, serif;
+    color:var(--text-body);
+    background:
+      radial-gradient(circle at 20% 0%, #f2f7fb 0%, transparent 45%),
+      linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2) 100%);
+    background-attachment: fixed;
+    line-height:1.7;
+  }
+
+  h1,h2,h3,.brand{
+    font-family:'Playfair Display', 'Lora', serif;
+    color:var(--navy);
+    margin:0;
+  }
+
+  a{ color:inherit; text-decoration:none; }
+
+  .container{
+    max-width:1200px;
+    margin:0 auto;
+    padding:0 32px;
+  }
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:rgba(238,243,248,0.85);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border);
+  }
+  .nav-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:18px 0;
+    gap:24px;
+  }
+  .brand{ font-size:1.4rem; font-weight:700; white-space:nowrap; }
+  nav.links{
+    display:flex;
+    gap:28px;
+    flex-wrap:wrap;
+    font-size:0.95rem;
+    font-weight:500;
+  }
+  nav.links a{
+    color:var(--navy);
+    opacity:0.85;
+    transition:opacity .2s, color .2s;
+  }
+  nav.links a:hover{ opacity:1; color:var(--teal-dark); }
+  .nav-actions{ display:flex; align-items:center; gap:14px; }
+
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:10px 20px;
+    border-radius:8px;
+    font-family:'Lora', serif;
+    font-weight:600;
+    font-size:0.95rem;
+    cursor:pointer;
+    border:1px solid transparent;
+    transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+  }
+  .btn:hover{ transform:translateY(-1px); }
+  .btn-navy{ background:var(--navy); color:#fff; }
+  .btn-navy:hover{ background:var(--navy-soft); box-shadow:0 8px 18px rgba(15,42,71,0.25); }
+  .btn-outline{ background:#fff; color:var(--navy); border-color:var(--border); }
+  .btn-outline:hover{ border-color:var(--teal); color:var(--teal-dark); }
+  .btn-teal-outline{ background:transparent; color:var(--teal-dark); border-color:var(--teal); }
+  .btn-teal-outline:hover{ background:var(--teal); color:#fff; }
+  .btn-sm{ padding:7px 14px; font-size:0.85rem; }
+  .btn-block{ width:100%; justify-content:center; }
+
+  .icon-toggle{
+    width:38px; height:38px;
+    display:flex; align-items:center; justify-content:center;
+    border-radius:50%;
+    border:1px solid var(--border);
+    background:#fff;
+    cursor:pointer;
+    color:var(--navy);
+    flex:0 0 auto;
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{ position:relative; padding:80px 0 60px; }
+  .hero-inner{ display:grid; grid-template-columns:1fr 340px; gap:48px; align-items:start; }
+  .hero-main{ text-align:center; }
+  .avatar-wrap{
+    width:170px; height:170px; border-radius:50%; margin:0 auto 32px; padding:5px;
+    background:linear-gradient(135deg, var(--teal), #bfe3ec);
+  }
+  .avatar-wrap img{ width:100%; height:100%; border-radius:50%; object-fit:cover; display:block; border:3px solid #fff; }
+  .hero-eyebrow{ color:var(--teal-dark); font-style:italic; font-size:1.05rem; margin-bottom:8px; }
+  .hero-main h1{ font-size:3.4rem; margin-bottom:14px; }
+  .role-line{ color:var(--teal-dark); font-size:1.25rem; font-style:italic; margin-bottom:24px; }
+  .hero-desc{ max-width:720px; margin:0 auto 34px; font-size:1.05rem; color:var(--text-body); }
+  .hero-cta{ display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin-bottom:28px; }
+  .scroll-hint{ display:block; font-size:0.85rem; color:var(--text-muted); text-align:center; }
+
+  .side-card{
+    background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow);
+    padding:26px; position:sticky; top:100px;
+  }
+  .side-card h3{ font-size:1.15rem; }
+  .side-card .role{ color:var(--text-muted); font-size:0.9rem; margin-bottom:16px; display:block; }
+  .side-list{ list-style:none; margin:0 0 16px; padding:0; font-size:0.88rem; }
+  .side-list li{ display:flex; gap:10px; align-items:flex-start; margin-bottom:9px; color:var(--text-body); }
+  .divider{ height:1px; background:var(--border); margin:16px 0; }
+  .social-list{ list-style:none; margin:0 0 20px; padding:0; font-size:0.9rem; }
+  .social-list li{ display:flex; gap:10px; align-items:center; margin-bottom:10px; }
+  .social-list a:hover{ color:var(--teal-dark); }
+
+  /* ---------- Section shell ---------- */
+  section{ padding:70px 0; }
+  .section-head{ text-align:center; max-width:640px; margin:0 auto 48px; }
+  .section-head h2{ font-size:2.2rem; margin-bottom:12px; }
+  .section-head p{ color:var(--text-muted); font-size:1rem; }
+  .section-alt{ background:rgba(255,255,255,0.4); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+
+  /* ---------- About ---------- */
+  .about-grid{ display:grid; grid-template-columns:280px 1fr; gap:36px; align-items:start; }
+  .about-info-card{
+    background:var(--card); border:1px solid var(--border); border-radius:var(--radius);
+    padding:24px; box-shadow:var(--shadow); font-size:0.95rem;
+  }
+  .about-info-card p{ margin:0 0 12px; }
+  .about-info-card p:last-child{ margin-bottom:0; }
+  .about-info-card strong{ color:var(--navy); }
+  .about-text{
+    background:var(--card); border:1px solid var(--border); border-radius:var(--radius);
+    padding:28px; box-shadow:var(--shadow); font-size:1rem;
+  }
+
+  /* ---------- Timeline ---------- */
+  .timeline{ position:relative; max-width:820px; margin:0 auto; padding-left:28px; }
+  .timeline::before{ content:""; position:absolute; left:6px; top:6px; bottom:6px; width:2px; background:var(--border); }
+  .t-item{ position:relative; padding-bottom:36px; }
+  .t-item:last-child{ padding-bottom:0; }
+  .t-dot{ position:absolute; left:-28px; top:4px; width:14px; height:14px; border-radius:50%; background:var(--navy); border:3px solid var(--bg-1); box-shadow:0 0 0 1px var(--border); }
+  .t-dot.amber{ background:var(--amber); }
+  .t-dot.blue{ background:var(--blue-dot); }
+  .t-card{ background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:22px 24px; box-shadow:var(--shadow); }
+  .t-card h3{ font-size:1.15rem; margin-bottom:4px; }
+  .t-meta{ font-size:0.85rem; color:var(--text-muted); margin-bottom:6px; }
+  .t-card p.company{ margin:0; font-size:0.92rem; color:var(--text-body); }
+
+  /* ---------- Trainings ---------- */
+  .training-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:18px; max-width:900px; margin:0 auto; }
+  .training-tile{
+    background:var(--card); border:1px solid var(--border); border-radius:var(--radius);
+    padding:18px 20px; box-shadow:var(--shadow); font-size:0.92rem; display:flex; gap:12px; align-items:flex-start;
+  }
+  .training-tile .ico{ font-size:1.2rem; flex:0 0 auto; }
+
+  /* ---------- Publications ---------- */
+  .pub-list{ max-width:820px; margin:0 auto; display:flex; flex-direction:column; gap:20px; }
+  .pub-card{ background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:26px 28px; box-shadow:var(--shadow); text-align:center; }
+  .pub-card h3{ font-size:1.15rem; margin-bottom:16px; }
+
+  /* ---------- Contact ---------- */
+  .contact-cards{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-bottom:40px; }
+  .contact-mini{ background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:24px; text-align:center; box-shadow:var(--shadow); }
+  .contact-mini .ico{ width:46px; height:46px; border-radius:50%; background:var(--tag-bg); color:var(--teal-dark); display:flex; align-items:center; justify-content:center; margin:0 auto 12px; font-size:1.2rem; }
+  .contact-mini h4{ margin:0 0 6px; color:var(--navy); font-size:1rem; }
+  .contact-mini a{ color:var(--text-body); }
+  .contact-mini a:hover{ color:var(--teal-dark); }
+
+  .social-row{ display:flex; justify-content:center; gap:16px; align-items:center; margin-bottom:44px; font-size:0.95rem; color:var(--text-muted); }
+  .social-row a{ color:var(--navy); font-weight:600; }
+  .social-row a:hover{ color:var(--teal-dark); }
+
+  form.contact-form{
+    max-width:680px; margin:0 auto;
+    background:var(--card); border:1px solid var(--border); border-radius:var(--radius);
+    padding:32px; box-shadow:var(--shadow);
+  }
+  .form-row{ display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px; }
+  .field{ display:flex; flex-direction:column; gap:6px; }
+  .field label{ font-size:0.85rem; font-weight:600; color:var(--navy); }
+  .field input, .field textarea{
+    font-family:'Lora', serif; padding:11px 14px; border:1px solid var(--border);
+    border-radius:8px; background:#fbfdff; font-size:0.95rem; color:var(--text-body);
+  }
+  .field input:focus, .field textarea:focus{ outline:2px solid var(--teal); border-color:var(--teal); }
+  .field textarea{ min-height:130px; resize:vertical; }
+  .form-note{ font-size:0.8rem; color:var(--text-muted); margin-top:14px; text-align:center; }
+
+  /* ---------- Footer ---------- */
+  footer{ background:var(--navy); color:#dbe7f1; padding:48px 0 28px; font-size:0.9rem; }
+  footer h3{ color:#fff; font-size:1.3rem; }
+  footer .foot-role{ color:var(--teal); margin-bottom:16px; display:block; }
+  .foot-grid{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:24px; }
+  .foot-links{ display:flex; gap:18px; }
+  .foot-links a{ color:#dbe7f1; opacity:.85; }
+  .foot-links a:hover{ opacity:1; color:var(--teal); }
+  .foot-bottom{ margin-top:32px; padding-top:20px; border-top:1px solid rgba(255,255,255,0.12); text-align:center; color:#9fb2c4; font-size:0.82rem; }
+
+  /* ---------- Floating buttons ---------- */
+  .float-btn{
+    position:fixed; width:56px; height:56px; right:26px; border-radius:50%;
+    display:flex; align-items:center; justify-content:center; color:#fff; font-size:26px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.25); z-index:80; transition:transform .2s ease;
+  }
+  .float-btn:hover{ transform:scale(1.08); }
+  .whatsapp-float{ bottom:26px; background:#25D366; }
+  .messenger-float{ bottom:92px; background:#0084FF; }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 980px){
+    .hero-inner{ grid-template-columns:1fr; }
+    .side-card{ position:static; max-width:420px; margin:40px auto 0; }
+    nav.links{ display:none; }
+    .about-grid{ grid-template-columns:1fr; }
+    .training-grid{ grid-template-columns:1fr; }
+    .contact-cards{ grid-template-columns:1fr; }
+    .form-row{ grid-template-columns:1fr; }
+  }
+  @media (max-width: 560px){
+    .hero-main h1{ font-size:2.3rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav-row">
+    <a href="#home" class="brand">Janak Neupane</a>
+    <nav class="links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#trainings">Trainings</a>
+      <a href="#publications">Publications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-teal-outline btn-sm" href="assets/cv/Janak_Neupane_CV.pdf" target="_blank" rel="noopener">📄 Resume</a>
+      <div class="icon-toggle" title="Toggle theme">🌙</div>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="container hero-inner">
+    <div class="hero-main">
+      <div class="avatar-wrap">
+        <img src="assets/images/profile.png" alt="Janak Neupane">
+      </div>
+      <p class="hero-eyebrow">Hello, Namaste!</p>
+      <h1>Janak Neupane</h1>
+      <p class="role-line">Mechanical Engineer | Renewable Energy Engineer</p>
+      <p class="hero-desc">
+        I am Er. Janak Neupane. I have completed my Bachelor's degree in Mechanical Engineering and
+        Master's in Renewable Energy Engineering from the Institute of Engineering, Tribhuvan University.
+        With 8 years of experience spanning government service, technical instruction, and renewable
+        energy projects, I focus on practical engineering solutions for Nepal's transportation and energy sectors.
+      </p>
+      <div class="hero-cta">
+        <a href="#experience" class="btn btn-navy">📖 View Resume</a>
+        <a href="#contact" class="btn btn-outline">✉️ Contact Me</a>
+      </div>
+      <a href="#about" class="scroll-hint">↓ Scroll Down</a>
+    </div>
+
+    <aside class="side-card">
+      <h3>Janak Neupane</h3>
+      <span class="role">Mechanical Engineer</span>
+      <ul class="side-list">
+        <li>💼 8 Years Experience</li>
+        <li>✉️ janakneupane999@gmail.com</li>
+        <li>📞 +977 9851064531</li>
+        <li>📍 Kathmandu, Nepal</li>
+      </ul>
+      <div class="divider"></div>
+      <ul class="social-list">
+        <li>🔗 <a href="https://linkedin.com/in/jawnock" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li>📘 <a href="https://www.facebook.com/jawnock" target="_blank" rel="noopener">Facebook</a></li>
+        <li>💬 <a href="https://wa.me/9779851064531" target="_blank" rel="noopener">WhatsApp</a></li>
+      </ul>
+      <a href="#contact" class="btn btn-navy btn-block">Contact Me</a>
+    </aside>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="section-head">
+      <h2>About Me</h2>
+      <p>Mechanical Engineer with experience in government service, instructing, and renewable energy projects</p>
+    </div>
+    <div class="about-grid">
+      <div class="about-info-card">
+        <p><strong>Name:</strong> Janak Neupane</p>
+        <p><strong>Job Role:</strong> Mechanical Engineer</p>
+        <p><strong>Experience:</strong> 8 Years</p>
+        <p><strong>Address:</strong> Kathmandu, Nepal</p>
+      </div>
+      <div class="about-text">
+        <p><strong>Hello and Namaste,</strong></p>
+        <p>I am Er. Janak Neupane. I have completed my Bachelor's degree in Mechanical Engineering
+        and Master's in Renewable Energy Engineering from the Institute of Engineering, Tribhuvan
+        University. My career spans public-sector transportation management, technical education
+        in mechatronics, and hands-on engineering work in hydropower and renewable energy projects
+        across Nepal.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="section-alt">
+  <div class="container">
+    <div class="section-head">
+      <h2>Professional Experience</h2>
+      <p>Mechanical Engineer with experience in government service, instructing, and renewable energy projects</p>
+    </div>
+    <div class="timeline">
+      <div class="t-item">
+        <span class="t-dot"></span>
+        <div class="t-card">
+          <h3>Mechanical Supervisor</h3>
+          <div class="t-meta">January 2024 – Present</div>
+          <p class="company">Department of Transportation Management, Nepal Government · Minbhawan, Kathmandu</p>
+        </div>
+      </div>
+      <div class="t-item">
+        <span class="t-dot amber"></span>
+        <div class="t-card">
+          <h3>Mechatronics Instructor</h3>
+          <div class="t-meta">December 2022 – January 2024</div>
+          <p class="company">Balaju School of Engineering & Technology (BSET), CTEVT</p>
+        </div>
+      </div>
+      <div class="t-item">
+        <span class="t-dot blue"></span>
+        <div class="t-card">
+          <h3>Mechanical Engineer</h3>
+          <div class="t-meta">November 2018 – November 2020</div>
+          <p class="company">Trishna Hydro Engineering & Business Company Pvt. Ltd.</p>
+        </div>
+      </div>
+      <div class="t-item">
+        <span class="t-dot"></span>
+        <div class="t-card">
+          <h3>Trainee</h3>
+          <div class="t-meta">December 2017 – January 2018</div>
+          <p class="company">Kaligandaki "A" Hydropower Plant, NEA Project</p>
+        </div>
+      </div>
+      <div class="t-item">
+        <span class="t-dot"></span>
+        <div class="t-card">
+          <h3>Trainee</h3>
+          <div class="t-meta">December 2017 – January 2018</div>
+          <p class="company">Kaligandaki Fish Hatchery, NEA–NARC Joint Project</p>
+        </div>
+      </div>
+      <div class="t-item">
+        <span class="t-dot"></span>
+        <div class="t-card">
+          <h3>Trainee</h3>
+          <div class="t-meta">November 2017 – December 2017</div>
+          <p class="company">New Shiv Service Centre Pvt. Ltd., Hyundai Authorized Service Centre</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="container">
+    <div class="section-head">
+      <h2>Academic Background</h2>
+      <p>Education in Mechanical and Renewable Energy Engineering</p>
+    </div>
+    <div class="timeline">
+      <div class="t-item">
+        <span class="t-dot"></span>
+        <div class="t-card">
+          <h3>Master's in Renewable Energy Engineering</h3>
+          <div class="t-meta">2026</div>
+          <p class="company">Tribhuvan University, IOE, Pulchowk Campus</p>
+        </div>
+      </div>
+      <div class="t-item">
+        <span class="t-dot"></span>
+        <div class="t-card">
+          <h3>Bachelor of Engineering (Mechanical)</h3>
+          <div class="t-meta">2018</div>
+          <p class="company">Tribhuvan University, Institute of Engineering (IOE)</p>
+        </div>
+      </div>
+      <div class="t-item">
+        <span class="t-dot"></span>
+        <div class="t-card">
+          <h3>12th (+2 Science)</h3>
+          <div class="t-meta">2014</div>
+          <p class="company">Nepal Prahari H.S. Boarding School</p>
+        </div>
+      </div>
+      <div class="t-item">
+        <span class="t-dot"></span>
+        <div class="t-card">
+          <h3>10th (S.L.C)</h3>
+          <div class="t-meta">2012</div>
+          <p class="company">Ram Janaki Boarding Ma Vi</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="trainings" class="section-alt">
+  <div class="container">
+    <div class="section-head">
+      <h2>Trainings & Professional Development</h2>
+      <p>Continuing education, certifications, and specialized technical training</p>
+    </div>
+    <div class="training-grid">
+      <div class="training-tile"><span class="ico">📘</span><span>Vehicle Inspection and Fitness Testing — Organized by Department of Roads (DOR)</span></div>
+      <div class="training-tile"><span class="ico">📘</span><span>Safe System Approach and Implementation Guide for National Road Safety Action Plan — Organized by Department of Roads (DOR)</span></div>
+      <div class="training-tile"><span class="ico">📘</span><span>Capacity Development Training on Design of Solar PV System using PVsyst — Organized by Centre for Pollution Studies</span></div>
+      <div class="training-tile"><span class="ico">📘</span><span>South-South and Triangular Cooperation (SSTC) on Renewable Energy — 2nd Training — Organized by Ministry of Energy and Mineral Resources, Indonesia</span></div>
+      <div class="training-tile"><span class="ico">📘</span><span>South-South and Triangular Cooperation (SSTC) on Renewable Energy — 1st Training — Organized by Ministry of Energy and Mineral Resources, Indonesia</span></div>
+      <div class="training-tile"><span class="ico">📘</span><span>Training on Solar Water Pumps — Organized by ICIMOD and Sunfarmer Nepal</span></div>
+      <div class="training-tile"><span class="ico">📘</span><span>Basic Training on ANSYS — Organized by Free Students Union with Society of Mechanical Engineering Students, Purwanchal Campus, Dharan</span></div>
+      <div class="training-tile"><span class="ico">📘</span><span>Basic and Advanced Training on CATIA — Organized by Free Students Union with Society of Mechanical Engineering Students, Purwanchal Campus, Dharan</span></div>
+      <div class="training-tile"><span class="ico">📘</span><span>Basic and Advanced Training on SOLIDWORKS — Organized by Society of Mechanical Engineering Students, Purwanchal Campus, Dharan</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="publications">
+  <div class="container">
+    <div class="section-head">
+      <h2>Published Journals & Papers</h2>
+      <p>Peer-reviewed research and academic publications</p>
+    </div>
+    <div class="pub-list">
+      <div class="pub-card">
+        <h3>Comparative Analysis of Bieri Vertical and Conventional Sediment Flushing in Hydropower Projects of Gandaki Basin</h3>
+        <a class="btn btn-navy" href="https://elibrary.tucl.edu.np/items/e3bd5677-666b-4122-8eba-b2fefda836cf" target="_blank" rel="noopener">Read Full Paper</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section-alt">
+  <div class="container">
+    <div class="section-head">
+      <h2>Contact Me</h2>
+      <p>Below are the details to reach out to me</p>
+    </div>
+
+    <div class="contact-cards">
+      <div class="contact-mini">
+        <div class="ico">📍</div>
+        <h4>Address</h4>
+        <p>Kathmandu, Nepal</p>
+      </div>
+      <div class="contact-mini">
+        <div class="ico">📞</div>
+        <h4>Contact Number</h4>
+        <a href="tel:+9779851064531">+977 9851064531</a>
+      </div>
+      <div class="contact-mini">
+        <div class="ico">✉️</div>
+        <h4>Email Address</h4>
+        <a href="mailto:janakneupane999@gmail.com">janakneupane999@gmail.com</a>
+      </div>
+    </div>
+
+    <div class="social-row">
+      <span>Find me on</span>
+      <a href="https://www.facebook.com/jawnock" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://linkedin.com/in/jawnock" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+
+    <form class="contact-form" action="https://formspree.io/f/xqergpzv" method="POST">
+      <div class="form-row">
+        <div class="field"><label for="name">Name</label><input type="text" id="name" name="name" placeholder="Your name" required></div>
+        <div class="field"><label for="email">Email</label><input type="email" id="email" name="email" placeholder="you@example.com" required></div>
+      </div>
+      <div class="field" style="margin-bottom:16px;">
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="_subject" placeholder="Subject">
+      </div>
+      <div class="field" style="margin-bottom:20px;">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Your message" required></textarea>
+      </div>
+      <!-- honeypot field to reduce spam, hidden from real users -->
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+      <button type="submit" class="btn btn-navy btn-block">Send Message</button>
+      <p class="form-note">This form is powered by Formspree and delivers straight to janakneupane999@gmail.com.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="container foot-grid">
+    <div>
+      <h3>Janak Neupane</h3>
+      <span class="foot-role">Mechanical Engineer</span>
+      <div>janakneupane999@gmail.com</div>
+      <div>+977 9851064531</div>
+      <div>Kathmandu, Nepal</div>
+    </div>
+    <div class="foot-links">
+      <a href="https://www.facebook.com/jawnock" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://linkedin.com/in/jawnock" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://wa.me/9779851064531" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+  <div class="foot-bottom">© <span id="year"></span> Janak Neupane. All rights reserved.</div>
+</footer>
+
+<a href="https://m.me/jawnock" class="float-btn messenger-float" target="_blank" rel="noopener" title="Chat on Messenger">💬</a>
+<a href="https://wa.me/9779851064531" class="float-btn whatsapp-float" target="_blank" rel="noopener" title="Chat on WhatsApp">📱</a>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
